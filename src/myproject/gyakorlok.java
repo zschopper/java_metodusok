@@ -2,28 +2,27 @@ package gyakorlok;
 
 public class MetodusokGyak1 {
     public static void main(String[] args) {
-        MetodusokGyak1.elso10SzamOsszege();
-        MetodusokGyak1.osszead(3, 7);
+        int osszeg = MetodusokGyak1.elso10SzamOsszege();
+
+        MetodusokGyak1.kiir("Az első 10 szám összege: " + osszeg);
+        int a = 3, b = 7;
+        osszeg = MetodusokGyak1.osszead(a, b);
+        MetodusokGyak1.kiir(printf("%d + %d = %d\n" + a, b, osszeg));
     }
 
-    private static void elso10SzamOsszege() {
-        // összead
+    private static int elso10SzamOsszege() {
         int osszeg = 0;
         for (int i = 0; i < 10; i++) {
             osszeg += 10;
         }
-        //kiir
-        MetodusokGyak1.kiir(sprintf("Az első 10 szám összege: " + osszeg));
+        return osszeg;
     }
 
-    private void kiir(String szoveg) {
+    private static int osszead(int a, int b) {
+        return a + b;
+    }
+
+    private static void kiir(String szoveg) {
         System.out.println(szoveg);
-    }
-
-    private static void osszead(int a, int b) {
-        //összead és kiír
-        MetodusokGyak1.kiir(sprintf("%d + %d = %d\n" + a, b, a+b));
-
-
     }
 }
