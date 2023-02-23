@@ -9,6 +9,8 @@ public class MetodusokGyak1 {
         int[] szamok = new int[]{3, 7, 10};
         osszeg = osszead(szamok);
         kiir("A megadott számok összege: %d\n".formatted(osszeg));
+        int gyok = gyokvonas(szamok);
+        kiir("A megadott számok összegének gyöke: %d\n".formatted(gyok));
     }
 
     private static int elso10SzamOsszege() {
@@ -25,6 +27,11 @@ public class MetodusokGyak1 {
             osszeg += szam;
         }
         return osszeg;
+    }
+    
+    private static int gyokvonas(int[] szamok) {
+        int osszeg = osszead(szamok);
+        return (int)Math.sqrt(osszeg);
     }
 
     private static void kiir(String szoveg) {
