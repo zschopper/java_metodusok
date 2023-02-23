@@ -1,4 +1,4 @@
-package Gyakorlok;
+package myproject;
 
 public class MetodusokGyak1 {
 
@@ -20,8 +20,8 @@ public class MetodusokGyak1 {
     }
 
     private static int osszead(int[] szamok) {
-        int osszeg = 0
-        for (szam: szamok) {
+        int osszeg = 0;
+        for (int szam: szamok) {
             osszeg += szam;
         }
         return osszeg;
