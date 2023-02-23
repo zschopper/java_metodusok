@@ -7,7 +7,7 @@ public class MetodusokGyak1 {
         kiir("Az első 10 szám összege: " + osszeg);
         int a = 3, b = 7;
         osszeg = osszead(a, b);
-        kiir("%d + %d = %d\n".format(a, b, osszeg));
+        kiir("%d + %d = %d\n".formatted(a, b, osszeg));
     }
 
     private static int elso10SzamOsszege() {
