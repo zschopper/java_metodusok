@@ -1,13 +1,14 @@
 package Gyakorlok;
 
 public class MetodusokGyak1 {
+
     public static void main(String[] args) {
         int osszeg = elso10SzamOsszege();
 
         kiir("Az első 10 szám összege: " + osszeg);
-        int a = 3, b = 7;
-        osszeg = osszead(a, b);
-        kiir("%d + %d = %d\n".formatted(a, b, osszeg));
+        int[] szamok = new int[]{3, 7, 10};
+        osszeg = osszead(szamok);
+        kiir("A megadott számok összege: %d\n".formatted(osszeg));
     }
 
     private static int elso10SzamOsszege() {
@@ -18,8 +19,12 @@ public class MetodusokGyak1 {
         return osszeg;
     }
 
-    private static int osszead(int a, int b) {
-        return a + b;
+    private static int osszead(int[] szamok) {
+        int osszeg = 0
+        for (szam: szamok) {
+            osszeg += szam;
+        }
+        return osszeg;
     }
 
     private static void kiir(String szoveg) {
