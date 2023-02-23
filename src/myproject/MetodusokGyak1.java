@@ -3,14 +3,30 @@ package myproject;
 public class MetodusokGyak1 {
 
     public static void main(String[] args) {
-        int osszeg = elso10SzamOsszege();
+        szamolasok();
+    }
 
+    public static void szamolasok() {
+        elso10SzamOsszegKiir();
+        szamok_osszeadasa();
+        gyokvonas_osszegbol();
+    }
+
+    public static void elso10SzamOsszegKiir() {
+        int osszeg = elso10SzamOsszege();
         kiir("Az első 10 szám összege: " + osszeg);
-        int[] szamok = new int[]{3, 7, 10};
-        osszeg = osszead(szamok);
+    }
+
+    public static void szamok_osszeadasa() {
+        int[] szamok = new int[]{1, 2, 3, 4};
+        int osszeg = osszead(szamok);
         kiir("A megadott számok összege: %d\n".formatted(osszeg));
-        int gyok = gyokvonas(szamok);
-        kiir("A megadott számok összegének gyöke: %d\n".formatted(gyok));
+    }
+
+    public static void gyokvonas_osszegbol() {
+        int[] szamok = new int[]{1, 2, 3, 4};
+        double gyok = gyokvonas(szamok);
+        kiir("A megadott számok összegének gyöke: %.4f\n".formatted(gyok));
     }
 
     private static int elso10SzamOsszege() {
@@ -28,10 +44,10 @@ public class MetodusokGyak1 {
         }
         return osszeg;
     }
-    
-    private static int gyokvonas(int[] szamok) {
+
+    private static double gyokvonas(int[] szamok) {
         int osszeg = osszead(szamok);
-        return (int)Math.sqrt(osszeg);
+        return Math.sqrt(osszeg);
     }
 
     private static void kiir(String szoveg) {
