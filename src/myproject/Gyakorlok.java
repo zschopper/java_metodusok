@@ -13,7 +13,7 @@ public class MetodusokGyak1 {
     private static int elso10SzamOsszege() {
         int osszeg = 0;
         for (int i = 0; i < 10; i++) {
-            osszeg += 10;
+            osszeg += i;
         }
         return osszeg;
     }
